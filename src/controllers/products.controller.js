@@ -3,9 +3,9 @@ const store = require('../../config')
 
 const getProduct = ( req, res ) => {
 
-  const id = req.params.id;
+  const slug = req.params.slug;
 
-  store.WooCommerce.get('products/'+id )
+  store.WooCommerce.get('products/?slug='+slug )
   .then((response) => {
     res.send(response.data);
   })
