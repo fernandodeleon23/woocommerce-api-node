@@ -25,7 +25,19 @@ const getCategories = ( req, res ) => {
     });
 }
 
+function getCategoryBySlug( slug ){
+	
+	store.WooCommerce.get("products/categories")
+    .then((response) => {
+      return response.data
+    })
+    .catch((error) => {
+      console.log(error.response.data);
+    });
+}
+
 module.exports = {
-    getCategory,
-    getCategories
+  getCategory,
+  getCategories,
+  getCategoryBySlug
 }

@@ -20,5 +20,5 @@ app.use( productsRouter )
 app.use( categoriesRouter )
 
 app.listen( 3000, () => {
-    console.log('Holaaa')
+    console.log('App corriendo en http://localhost:3000')
 })
