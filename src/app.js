@@ -13,11 +13,13 @@ app.use(cors({
 }));
 
 // Routes
+const authRouter = require('./routes/auth.router')
 const productsRouter = require('./routes/product.router')
 const categoriesRouter = require('./routes/category.router')
 const customersController = require('./routes/costumers.router')
 const ordersController = require('./routes/orders.router')
 
+app.use( authRouter )
 app.use( productsRouter )
 app.use( categoriesRouter )
 app.use( customersController )
